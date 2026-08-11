@@ -1,0 +1,7 @@
+/*
+ stack vs heap memory
+
+ stack memory associated with primitive data types and they gave copy of the value.
+ 
+ heap memory associated with reference data types and they gave value as a reference to the object in memory.
+*/
