@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white h-full  flex items-center justify-center min-h-screen">
+  <div class="parent">
+    <div class="child">monday</div>
+    <div class="child">tuesday</div>
+    <div class="child">wednesday</div>
+    <div class="child">thursday</div>
+    <div class="child">friday</div>
+  </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i];
+        if (element.innerText == "tuesday") {
+            element.style.color="green"
+        }
+        console.log(element.innerHtml)
+    }
+</script>
+</html>

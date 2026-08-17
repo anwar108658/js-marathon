@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800 text-white h-full  flex items-center justify-center min-h-screen">
+    <div class="parent flex flex-wrap gap-2">
+
+    </div>
+  
+</body>
+<script>
+
+    const dataList = [
+  {
+    elementName: "div",
+    backgroundColor: "green",
+    value: "2 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "red",
+    value: "5 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "blue",
+    value: "8 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "yellow",
+    value: "10 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "purple",
+    value: "15 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "orange",
+    value: "20 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "pink",
+    value: "25 div"
+  },
+  {
+    elementName: "div",
+    backgroundColor: "cyan",
+    value: "30 div"
+  }
+];
+
+
+dataList.forEach((item) => (
+        (function createElement({elementName,backgroundColor,value}) {
+            const element1 = document.createElement(elementName)
+            element1.className = "div1"
+            element1.id = Math.random()
+            element1.setAttribute("title",value)
+            element1.style.backgroundColor = String(backgroundColor)
+            element1.style.color = "white"
+            element1.style.padding = "5px 15px"
+            element1.style.borderRadius = "15px"
+            const text = document.createTextNode(value)
+            element1.appendChild(text)
+            document.body.firstElementChild.appendChild(element1)
+        })(item)
+    ))
+
+</script>
+</html>
